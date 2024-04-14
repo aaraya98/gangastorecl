@@ -1,0 +1,377 @@
+/* Estilo para toda la pagina */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+/* mixin para para flex con align content center y justify content variable*/
+/* mixin para botones de sesion carrito */
+/* mixin para hover al pasar por el nav*/
+/* mixin para posicionamiento de grids */
+.cabezal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  padding: 0px;
+  border-bottom: 1px solid #dedede;
+  background-color: rgba(22, 196, 88, 0.4);
+}
+.cabezal .containerCabezal {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr, 0.5fr, 1fr;
+  grid-template-rows: auto;
+  margin-bottom: 5px;
+}
+.cabezal .containerCabezal .information {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #470696;
+}
+.cabezal .containerCabezal .information p {
+  color: white;
+  font-size: clamp(0.9rem, 1vw, 2rem);
+  margin: 5px;
+}
+.cabezal .containerCabezal .logoHeader {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.cabezal .containerCabezal .logoHeader a img {
+  width: 100px;
+  height: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.cabezal .containerCabezal .presentationSearch {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: block;
+  width: 100%;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+.cabezal .containerCabezal .presentationSearch .presentation h1 {
+  text-align: start;
+  /* font-size: 1.4rem; */
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  word-wrap: break-word;
+}
+.cabezal .containerCabezal .presentationSearch .search {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.cabezal .containerCabezal .presentationSearch .search input {
+  width: 70%;
+  height: 35px;
+  border-radius: 5px;
+  padding: 8px;
+}
+.cabezal .containerCabezal .presentationSearch .search button {
+  width: 11%;
+  border-radius: 5px;
+  background-color: rgba(71, 6, 150, 0.5960784314);
+  color: #fff;
+}
+.cabezal .containerCabezal .presentationSearch .search button i:hover {
+  color: black;
+}
+.cabezal .sesionCart {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-top: 25px;
+}
+.cabezal .sesionCart .login {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: end;
+}
+.cabezal .sesionCart .login:hover {
+  text-decoration: none;
+  color: white;
+  font-size: 100%;
+  transition: 0.1s;
+}
+.cabezal .sesionCart .login .buttonLogin {
+  overflow: hidden;
+  width: 80%;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(71, 6, 150, 0.5960784314);
+  border: none;
+}
+.cabezal .sesionCart .login .buttonLogin:hover {
+  width: 90%;
+  height: 2.5rem;
+  transition: 0.3s;
+  color: white;
+}
+.cabezal .sesionCart .login .buttonLogin span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.cabezal .sesionCart .separador {
+  font-size: 1.4rem;
+}
+.cabezal .sesionCart .container-fluid .btncarro {
+  overflow: hidden;
+  width: 80%;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(71, 6, 150, 0.5960784314);
+  border: none;
+}
+.cabezal .sesionCart .container-fluid .btncarro:hover {
+  width: 90%;
+  height: 2.5rem;
+  transition: 0.3s;
+  text-decoration: none;
+  color: white;
+  font-size: 100%;
+  transition: 0.1s;
+}
+.cabezal .sesionCart .container-fluid .btncarro .nameCart {
+  font-size: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.cabezal .sesionCart .container-fluid .modal {
+  max-height: 80%;
+}
+.cabezal .sesionCart .container-fluid .modal .modal-dialog .modal-content .modal-body .table tbody tr td:last-child button i {
+  color: red;
+}
+.cabezal .sesionCart .container-fluid .modal .modal-dialog .modal-content .modal-body .table tfoot tr td {
+  font-size: 0.8rem;
+}
+.cabezal .sesionCart .container-fluid .modal .modal-dialog .modal-content .modal-footer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.cabezal .menuOptions {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgba(0, 0, 0, 0.11);
+}
+.cabezal .menuOptions .checkbtn {
+  cursor: pointer;
+  display: none;
+}
+.cabezal .menuOptions ul {
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.cabezal .menuOptions ul li {
+  width: 14%;
+  padding-top: 1%;
+  text-align: center;
+}
+.cabezal .menuOptions ul li:hover {
+  border-bottom: 3px solid #470696;
+  font-size: large;
+  color: #470696;
+  font-style: italic;
+  transition: all 0.1s;
+}
+.cabezal .menuOptions ul li a {
+  font-size: 75%;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a3866;
+  transition: all 0.3s;
+}
+.cabezal .menuOptions ul li a:hover {
+  color: #470696;
+  font-style: italic;
+  transition: all 0.1s;
+}
+.cabezal .menuOptions ul li i {
+  padding-left: 5px;
+}
+
+.sliderPromo {
+  width: 100%;
+  height: auto;
+  margin: 5px auto 0;
+  overflow: hidden;
+}
+.sliderPromo ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
+  animation: sliderpromo 20s infinite alternate ease-in-out;
+}
+.sliderPromo ul li {
+  width: 100%;
+  list-style: none;
+  position: relative;
+}
+.sliderPromo ul li a img {
+  width: 100%;
+  height: 30rem;
+}
+
+@keyframes sliderpromo {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -200%;
+  }
+  80% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+.ofertasproduct {
+  width: 100%;
+  margin-top: 1rem;
+}
+.ofertasproduct .namepromo {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(71, 6, 150, 0.7058823529);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+.ofertasproduct .namepromo h2 {
+  padding-top: 1%;
+  color: #dedede;
+}
+.ofertasproduct .products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  margin: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 15px;
+  padding: 0;
+  gap: 1%;
+}
+.ofertasproduct .products .product {
+  list-style: none;
+  width: 15%;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.ofertasproduct .products .product .productinfo {
+  color: #333;
+  text-decoration: none;
+}
+.ofertasproduct .products .product .productinfo .producttrademark {
+  margin-bottom: 0.5rem;
+}
+.ofertasproduct .products .product .productinfo .productname {
+  width: 100%;
+  height: auto;
+}
+.ofertasproduct .products .product .productinfo .productname p {
+  width: 100%;
+  height: 2.8rem;
+  overflow: hidden;
+}
+.ofertasproduct .products .product .productinfo .skuunits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+.ofertasproduct .products .product .productinfo .skuunits .productunits {
+  text-align: end;
+}
+.ofertasproduct .products .product .productinfo .skuunits .productunits span {
+  padding-right: 10%;
+}
+.ofertasproduct .products .product .productinfo .productimg {
+  text-align: center;
+}
+.ofertasproduct .products .product .productinfo .productimg img {
+  width: 95%;
+  height: auto;
+}
+.ofertasproduct .products .product .valuecart {
+  display: flex;
+  justify-content: space-between;
+}
+.ofertasproduct .products .product .valuecart .value {
+  padding-left: 5%;
+  color: #333;
+  text-decoration: none;
+}
+.ofertasproduct .products .product .valuecart .cartplus {
+  padding-right: 10%;
+  color: #333;
+}
+.ofertasproduct .products .product .valuecart .cartplus i {
+  font-size: 2rem;
+  height: 2.1rem;
+}
+.ofertasproduct .products .product:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 15.5%;
+  transition: all 0.2s;
+}/*# sourceMappingURL=main.css.map */

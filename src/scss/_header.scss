@@ -1,0 +1,211 @@
+.cabezal{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    padding: 0px;
+    border-bottom: 1px solid #dedede;
+    background-color: rgba(22, 196, 88, 0.4);
+    .containerCabezal{
+        @include positiongrid(1,5,1,2);
+        display: grid;
+        grid-template-columns: 1fr, 1fr, 1fr, 0.5fr, 1fr;
+        grid-template-rows: auto;
+        margin-bottom: 5px;
+        .information{
+            @include positiongrid(1,6,1,2);
+            width: 100%;
+            height: auto;
+            @include flexaligncontent(center);
+            background-color: #470696;
+            p{
+                color: white;
+                font-size: clamp(0.9rem, 1vw, 2rem);
+                margin: 5px;
+            }
+        }
+        .logoHeader{
+            @include positiongrid(1,2,2,3);
+            @include flexaligncontent(center);
+            width: 100%;
+            height: 100%;
+            a{
+                img{
+                    width: 100px;
+                    height: 100px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+        .presentationSearch{
+            @include positiongrid(2,4,2,3);
+            display: block;
+            width: 100%;
+            padding-left: 50px;
+            padding-top: 10px;
+            .presentation{
+                h1{
+                    text-align: start;
+                    /* font-size: 1.4rem; */
+                    font-size: clamp(1rem, 1vw, 1.5rem);
+                    word-wrap: break-word;
+                }
+            }
+            .search{
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 10px;
+                input{
+                    width: 70%;
+                    height: 35px;
+                    border-radius: 5px;
+                    padding: 8px;
+                }
+                button{
+                    width: 11%;
+                    border-radius: 5px;
+                    background-color: #47069698;
+                    color: #fff;
+                    i:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .sesionCart{
+        @include positiongrid(4,5,1,2);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-top: 25px;
+        .login{
+            width: 100%;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            justify-content: end;
+            &:hover{
+                text-decoration: none;
+                color: white;
+                font-size: 100%;
+                transition: 0.1s;
+            }
+            .buttonLogin{
+                overflow: hidden;
+                width: 80%;
+                height: 2rem;
+                border-radius: 10px;
+                background-color: #47069698;
+                border: none;
+                &:hover{
+                    @include buttonsesioncart;
+                    color: white;
+                }
+                span{
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }
+        .separador{
+            font-size: 1.4rem;
+        }
+        .container-fluid{
+            .btncarro{
+                overflow: hidden;
+                width: 80%;
+                height: 2rem;
+                border-radius: 10px;
+                background-color: #47069698;
+                border: none;
+                &:hover{
+                    @include buttonsesioncart;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 100%;
+                    transition: 0.1s;
+                }
+                .nameCart{
+                    font-size: 100%;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+            .modal{
+                max-height: 80%;
+                .modal-dialog{
+                    .modal-content{
+                        .modal-body{
+                            .table{
+                                tbody{
+                                    tr{
+                                        td:last-child{
+                                            button{
+                                                i{
+                                                    color: red;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                tfoot{
+                                    tr{
+                                        td{
+                                            font-size: 0.8rem
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .modal-footer{
+                            @include flexaligncontent(center);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menuOptions{
+        @include positiongrid(1,5,2,3);
+        background-color: rgba(0, 0, 0, 0.11);
+        .checkbtn{
+            cursor: pointer;
+            display: none;
+        }
+        ul{
+            display: inline-flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            list-style: none;
+            width: 100%;
+            padding: 0;
+            li{
+                width: 14%;
+                padding-top: 1%;
+                text-align: center;
+                &:hover{
+                    border-bottom: 3px solid #470696;
+                    font-size: large;
+                    @include color-font;
+                }
+                a{
+                    font-size: 75%;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: #4a3866;
+                    transition: all 0.3s;
+                    &:hover{
+                        @include color-font;
+                    }
+                }
+                i{
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
